@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verify your Stackly Finance email address.">
+    <title>Email Verification | Stackly Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">S</div>
+            <p>STACKLY FINANCE</p>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <main class="auth-page">
+        <section class="auth-shell">
+
+            <div class="auth-visual">
+                <a href="index.html" class="brand-logo">Stackly<span>.</span></a>
+                <div class="auth-visual-content">
+                    <span class="eyebrow">ONE MORE STEP</span>
+                    <h1>Your security is our priority.</h1>
+                    <p>Verify your email address to continue setting up your account.</p>
+                </div>
+                <div class="visual-decoration decoration-one"></div>
+                <div class="visual-decoration decoration-two"></div>
+                <div class="security-art">✉</div>
+                <p class="visual-footer">A SECURE START TO YOUR JOURNEY.</p>
+            </div>
+
+            <div class="auth-form-area">
+                <form class="auth-form" id="verificationForm">
+                    <span class="eyebrow">EMAIL VERIFICATION</span>
+                    <div class="verification-icon">✉</div>
+                    <h2>Verify your email</h2>
+                    <p class="form-description">
+                        We've prepared a verification step for your account.
+                        Enter the six-digit code below.
+                    </p>
+
+                    <div class="otp-container">
+                        <input type="text" maxlength="1" class="otp-input" aria-label="OTP digit 1" required>
+                        <input type="text" maxlength="1" class="otp-input" aria-label="OTP digit 2" required>
+                        <input type="text" maxlength="1" class="otp-input" aria-label="OTP digit 3" required>
+                        <input type="text" maxlength="1" class="otp-input" aria-label="OTP digit 4" required>
+                        <input type="text" maxlength="1" class="otp-input" aria-label="OTP digit 5" required>
+                        <input type="text" maxlength="1" class="otp-input" aria-label="OTP digit 6" required>
+                    </div>
+
+                    <p class="demo-hint">Demo verification code: <strong>123456</strong></p>
+                    <p class="form-message" id="verificationMessage"></p>
+
+                    <button type="submit" class="primary-btn form-submit">Verify Email →</button>
+                    <p class="form-bottom-text"><a href="signup.html">Back to Sign Up</a></p>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

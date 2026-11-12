@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Finance personal dashboard.">
+    <title>Dashboard | Stackly Finance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="dashboard-body">
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">S</div>
+            <p>STACKLY FINANCE</p>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="index.html" class="brand-logo sidebar-logo">
+                Stackly<span>.</span>
+            </a>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">MAIN MENU</p>
+
+                <a href="dashboard.html" class="sidebar-link active">
+                    <span>◫</span> Dashboard
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>↔</span> Transactions
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>↗</span> Income
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>↘</span> Expenses
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>▤</span> Budgets
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>▧</span> Invoices
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>▥</span> Reports
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>◉</span> Accounts
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>⚙</span> Settings
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">PREFERENCES</p>
+
+                <a href="profile.html" class="sidebar-link">
+                    <span>◎</span> My Profile
+                </a>
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a href="login.html" class="sidebar-link" id="logoutButton">
+                    <span>↪</span> Log Out
+                </a>
+
+                <div class="sidebar-help">
+                    <span>✦</span>
+                    <p>Make your money work smarter.</p>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Here's your financial overview at a glance.</p>
+                    </div>
+                </div>
+
+                <div class="header-user">
+                    <div class="notification-icon">♧</div>
+
+                    <div class="user-avatar" id="dashboardAvatar">U</div>
+
+                    <div class="user-info">
+                        <strong id="dashboardUserName">User</strong>
+                        <span>Personal Account</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- WELCOME SECTION -->
+            <section class="dashboard-welcome">
+
+                <div>
+                    <span class="eyebrow">YOUR FINANCIAL SPACE</span>
+                    <h2 id="welcomeName">Welcome back!</h2>
+                    <p>Keep an eye on your money and make every decision count.</p>
+                </div>
+
+                <div class="welcome-symbol">✳</div>
+
+            </section>
+
+
+            <!-- QUICK ACTIONS -->
+            <section class="quick-actions-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>Manage your money with ease.</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions-grid">
+
+                    <a href="#" class="quick-action-item">
+                        <span class="quick-action-icon income-action">＋</span>
+                        <span>
+                            <strong>Add Income</strong>
+                            <small>Record your earnings</small>
+                        </span>
+                    </a>
+
+                    <a href="#" class="quick-action-item">
+                        <span class="quick-action-icon expense-action">−</span>
+                        <span>
+                            <strong>Add Expense</strong>
+                            <small>Track your spending</small>
+                        </span>
+                    </a>
+
+                    <a href="#" class="quick-action-item">
+                        <span class="quick-action-icon transfer-action">⇄</span>
+                        <span>
+                            <strong>Transfer Money</strong>
+                            <small>Manage your funds</small>
+                        </span>
+                    </a>
+
+                    <a href="#" class="quick-action-item">
+                        <span class="quick-action-icon budget-action">▤</span>
+                        <span>
+                            <strong>Set Budget</strong>
+                            <small>Plan your expenses</small>
+                        </span>
+                    </a>
+
+                </div>
+            </section>
+
+
+            <!-- FINANCIAL SUMMARY -->
+            <section class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Total Balance</span>
+                        <span class="stat-icon">◉</span>
+                    </div>
+                    <h2>₹2,45,680</h2>
+                    <p class="stat-positive">↑ 8.2% this month</p>
+                    <small>Across all accounts</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Monthly Income</span>
+                        <span class="stat-icon">↗</span>
+                    </div>
+                    <h2>₹65,000</h2>
+                    <p class="stat-positive">↑ 5.4% this month</p>
+                    <small>Total money received</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Monthly Expenses</span>
+                        <span class="stat-icon">↘</span>
+                    </div>
+                    <h2>₹38,500</h2>
+                    <p class="stat-negative">↓ 2.1% this month</p>
+                    <small>Total money spent</small>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span>Monthly Savings</span>
+                        <span class="stat-icon">✧</span>
+                    </div>
+                    <h2>₹26,500</h2>
+                    <p class="stat-positive">↑ 12.8% this month</p>
+                    <small>40.8% of monthly income</small>
+                </article>
+
+            </section>
+
+
+            <!-- INCOME VS EXPENSES AND BUDGET -->
+            <section class="dashboard-content-grid">
+
+                <!-- INCOME VS EXPENSE CHART -->
+                <article class="dashboard-card chart-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Income vs Expenses</h3>
+                            <p>Compare your monthly cash flow.</p>
+                        </div>
+
+                        <select aria-label="Chart period">
+                            <option>Last 6 months</option>
+                            <option>Last 12 months</option>
+                        </select>
+                    </div>
+
+                    <div class="cashflow-summary">
+                        <div>
+                            <span>Total Income</span>
+                            <strong>₹3,63,000</strong>
+                        </div>
+
+                        <div>
+                            <span>Total Expenses</span>
+                            <strong>₹2,35,500</strong>
+                        </div>
+                    </div>
+
+                    <div class="chart-area">
+
+                        <div class="chart-y-labels">
+                            <span>₹70k</span>
+                            <span>₹55k</span>
+                            <span>₹40k</span>
+                            <span>₹25k</span>
+                            <span>₹0</span>
+                        </div>
+
+                        <div class="chart-bars">
+
+                            <div class="chart-group">
+                                <i style="height:65%"></i>
+                                <b style="height:40%"></b>
+                            </div>
+
+                            <div class="chart-group">
+                                <i style="height:75%"></i>
+                                <b style="height:50%"></b>
+                            </div>
+
+                            <div class="chart-group">
+                                <i style="height:68%"></i>
+                                <b style="height:43%"></b>
+                            </div>
+
+                            <div class="chart-group">
+                                <i style="height:82%"></i>
+                                <b style="height:58%"></b>
+                            </div>
+
+                            <div class="chart-group">
+                                <i style="height:78%"></i>
+                                <b style="height:48%"></b>
+                            </div>
+
+                            <div class="chart-group">
+                                <i style="height:92%"></i>
+                                <b style="height:55%"></b>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="chart-months">
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                        <span>Sep</span>
+                        <span>Oct</span>
+                        <span>Nov</span>
+                    </div>
+
+                    <div class="chart-legend">
+                        <span><i class="legend-income"></i> Income</span>
+                        <span><i class="legend-expense"></i> Expenses</span>
+                    </div>
+
+                </article>
+
+
+                <!-- MONTHLY BUDGET -->
+                <article class="dashboard-card budget-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Monthly Budget</h3>
+                            <p>Your spending limit for November.</p>
+                        </div>
+
+                        <span class="budget-menu">•••</span>
+                    </div>
+
+                    <div class="budget-total">
+                        <strong>₹38,500</strong>
+                        <span>of ₹50,000 spent</span>
+                    </div>
+
+                    <div class="budget-progress">
+                        <div class="budget-progress-fill"></div>
+                    </div>
+
+                    <div class="budget-remaining">
+                        <span>Remaining budget</span>
+                        <strong>₹11,500</strong>
+                    </div>
+
+                    <div class="budget-divider"></div>
+
+                    <h4>Budget Categories</h4>
+
+                    <div class="budget-category">
+
+                        <div class="category-details">
+                            <span class="category-dot category-food"></span>
+                            <span>Food & Dining</span>
+                            <strong>₹8,500 / ₹12,000</strong>
+                        </div>
+
+                        <div class="category-track">
+                            <span style="width:71%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="budget-category">
+
+                        <div class="category-details">
+                            <span class="category-dot category-shopping"></span>
+                            <span>Shopping</span>
+                            <strong>₹7,000 / ₹10,000</strong>
+                        </div>
+
+                        <div class="category-track">
+                            <span style="width:70%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="budget-category">
+
+                        <div class="category-details">
+                            <span class="category-dot category-bills"></span>
+                            <span>Monthly Bills</span>
+                            <strong>₹6,000 / ₹8,000</strong>
+                        </div>
+
+                        <div class="category-track">
+                            <span style="width:75%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="budget-category">
+
+                        <div class="category-details">
+                            <span class="category-dot category-travel"></span>
+                            <span>Travel</span>
+                            <strong>₹4,000 / ₹7,000</strong>
+                        </div>
+
+                        <div class="category-track">
+                            <span style="width:57%"></span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- EXPENSE BREAKDOWN AND SAVINGS GOALS -->
+            <section class="dashboard-content-grid">
+
+                <!-- EXPENSE BREAKDOWN -->
+                <article class="dashboard-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Expense Breakdown</h3>
+                            <p>Where your money goes this month.</p>
+                        </div>
+
+                        <span class="period-label">November 2026</span>
+                    </div>
+
+                    <div class="expense-breakdown">
+
+                        <div class="expense-donut">
+                            <div class="donut-center">
+                                <strong>₹38,500</strong>
+                                <span>Total Spent</span>
+                            </div>
+                        </div>
+
+                        <div class="expense-legend">
+
+                            <div>
+                                <span class="category-dot category-food"></span>
+                                <span>Food & Dining</span>
+                                <strong>22%</strong>
+                            </div>
+
+                            <div>
+                                <span class="category-dot category-shopping"></span>
+                                <span>Shopping</span>
+                                <strong>18%</strong>
+                            </div>
+
+                            <div>
+                                <span class="category-dot category-bills"></span>
+                                <span>Bills & Utilities</span>
+                                <strong>25%</strong>
+                            </div>
+
+                            <div>
+                                <span class="category-dot category-travel"></span>
+                                <span>Travel</span>
+                                <strong>15%</strong>
+                            </div>
+
+                            <div>
+                                <span class="category-dot category-other"></span>
+                                <span>Others</span>
+                                <strong>20%</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SAVINGS GOALS -->
+                <article class="dashboard-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Savings Goals</h3>
+                            <p>Keep moving towards your goals.</p>
+                        </div>
+
+                        <a href="#" class="view-link">View all</a>
+                    </div>
+
+                    <div class="saving-goal">
+
+                        <div class="goal-top">
+                            <div class="goal-icon">⌂</div>
+
+                            <div class="goal-info">
+                                <strong>Emergency Fund</strong>
+                                <span>₹75,000 of ₹1,00,000</span>
+                            </div>
+
+                            <strong class="goal-percentage">75%</strong>
+                        </div>
+
+                        <div class="goal-progress">
+                            <span style="width:75%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="saving-goal">
+
+                        <div class="goal-top">
+                            <div class="goal-icon">✈</div>
+
+                            <div class="goal-info">
+                                <strong>Dream Vacation</strong>
+                                <span>₹30,000 of ₹60,000</span>
+                            </div>
+
+                            <strong class="goal-percentage">50%</strong>
+                        </div>
+
+                        <div class="goal-progress">
+                            <span style="width:50%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="saving-goal">
+
+                        <div class="goal-top">
+                            <div class="goal-icon">▣</div>
+
+                            <div class="goal-info">
+                                <strong>New Laptop</strong>
+                                <span>₹45,000 of ₹60,000</span>
+                            </div>
+
+                            <strong class="goal-percentage">75%</strong>
+                        </div>
+
+                        <div class="goal-progress">
+                            <span style="width:75%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="goal-footer">
+                        <span>Total saved towards goals</span>
+                        <strong>₹1,50,000</strong>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- TRANSACTIONS AND UPCOMING BILLS -->
+            <section class="dashboard-content-grid">
+
+                <!-- RECENT TRANSACTIONS -->
+                <article class="dashboard-card transactions-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Recent Transactions</h3>
+                            <p>Your latest financial activity.</p>
+                        </div>
+
+                        <a href="#" class="view-link">View all</a>
+                    </div>
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-icon">🛒</div>
+
+                        <div class="transaction-info">
+                            <strong>Grocery Store</strong>
+                            <span>12 Nov · Shopping</span>
+                        </div>
+
+                        <strong class="expense-amount">−₹2,450</strong>
+
+                    </div>
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-icon">↗</div>
+
+                        <div class="transaction-info">
+                            <strong>Monthly Salary</strong>
+                            <span>11 Nov · Income</span>
+                        </div>
+
+                        <strong class="income-amount">+₹65,000</strong>
+
+                    </div>
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-icon">⌂</div>
+
+                        <div class="transaction-info">
+                            <strong>Electricity Bill</strong>
+                            <span>10 Nov · Bills</span>
+                        </div>
+
+                        <strong class="expense-amount">−₹1,850</strong>
+
+                    </div>
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-icon">♡</div>
+
+                        <div class="transaction-info">
+                            <strong>Investment</strong>
+                            <span>09 Nov · Savings</span>
+                        </div>
+
+                        <strong class="expense-amount">−₹5,000</strong>
+
+                    </div>
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-icon">☕</div>
+
+                        <div class="transaction-info">
+                            <strong>Cafe & Restaurant</strong>
+                            <span>08 Nov · Food</span>
+                        </div>
+
+                        <strong class="expense-amount">−₹850</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- UPCOMING BILLS -->
+                <article class="dashboard-card bills-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Upcoming Bills</h3>
+                            <p>Stay ahead of your payments.</p>
+                        </div>
+
+                        <a href="#" class="view-link">View all</a>
+                    </div>
+
+                    <div class="bill-row">
+
+                        <div class="bill-date">
+                            <strong>15</strong>
+                            <span>NOV</span>
+                        </div>
+
+                        <div class="bill-info">
+                            <strong>Electricity Bill</strong>
+                            <span>Due in 3 days</span>
+                        </div>
+
+                        <strong>₹1,850</strong>
+
+                    </div>
+
+                    <div class="bill-row">
+
+                        <div class="bill-date">
+                            <strong>18</strong>
+                            <span>NOV</span>
+                        </div>
+
+                        <div class="bill-info">
+                            <strong>Internet Bill</strong>
+                            <span>Due in 6 days</span>
+                        </div>
+
+                        <strong>₹999</strong>
+
+                    </div>
+
+                    <div class="bill-row">
+
+                        <div class="bill-date">
+                            <strong>22</strong>
+                            <span>NOV</span>
+                        </div>
+
+                        <div class="bill-info">
+                            <strong>Mobile Recharge</strong>
+                            <span>Due in 10 days</span>
+                        </div>
+
+                        <strong>₹599</strong>
+
+                    </div>
+
+                    <div class="bill-row">
+
+                        <div class="bill-date">
+                            <strong>25</strong>
+                            <span>NOV</span>
+                        </div>
+
+                        <div class="bill-info">
+                            <strong>Insurance Premium</strong>
+                            <span>Due in 13 days</span>
+                        </div>
+
+                        <strong>₹2,500</strong>
+
+                    </div>
+
+                    <div class="bill-total">
+                        <span>Total upcoming payments</span>
+                        <strong>₹5,948</strong>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- FINANCIAL INSIGHTS -->
+            <section class="dashboard-card insights-card">
+
+                <div class="card-heading">
+                    <div>
+                        <h3>Financial Insights</h3>
+                        <p>Small observations to help you manage money better.</p>
+                    </div>
+
+                    <span class="insight-star">✦</span>
+                </div>
+
+                <div class="insights-grid">
+
+                    <div class="insight-item">
+                        <span class="insight-icon">↗</span>
+                        <div>
+                            <strong>Great savings progress!</strong>
+                            <p>You saved ₹26,500 this month. Keep building your savings habit.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-item">
+                        <span class="insight-icon">◉</span>
+                        <div>
+                            <strong>Budget is under control</strong>
+                            <p>You have used 77% of your monthly budget, with ₹11,500 remaining.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-item">
+                        <span class="insight-icon">▤</span>
+                        <div>
+                            <strong>Upcoming payments</strong>
+                            <p>Plan ahead for ₹5,948 in upcoming bills this month.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Stackly Finance. All rights reserved.</p>
+                <p>Designed for smarter financial living.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

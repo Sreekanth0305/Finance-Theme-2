@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your Stackly Finance account.">
+    <title>Login | Stackly Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">S</div>
+            <p>STACKLY FINANCE</p>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <main class="auth-page">
+        <section class="auth-shell">
+
+            <div class="auth-visual">
+                <a href="index.html" class="brand-logo">Stackly<span>.</span></a>
+
+                <div class="auth-visual-content">
+                    <span class="eyebrow">WELCOME BACK</span>
+                    <h1>Manage your finances with confidence.</h1>
+                    <p>Bring your financial life together and make smarter decisions every day.</p>
+                </div>
+
+                <div class="visual-decoration decoration-one"></div>
+                <div class="visual-decoration decoration-two"></div>
+
+                <div class="visual-finance-card">
+                    <span>Your financial overview</span>
+                    <h2>₹ 2,45,680</h2>
+                    <div class="visual-bars"><i></i><i></i><i></i><i></i><i></i></div>
+                    <small>Illustrative demo data</small>
+                </div>
+
+                <p class="visual-footer">YOUR MONEY. YOUR PACE. YOUR FUTURE.</p>
+            </div>
+
+            <div class="auth-form-area">
+                <form class="auth-form" id="loginForm">
+                    <span class="eyebrow">STACKLY FINANCE</span>
+                    <h2>Welcome back!</h2>
+                    <p class="form-description">Please enter your details to sign in to your account.</p>
+
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                    
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+                    
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <svg class="eye-icon" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label><input type="checkbox" id="rememberMe"> Remember me</label>
+                        <a href="forgot-password.html">Forgot Password?</a>
+                    </div>
+
+                    <p class="form-message" id="loginMessage"></p>
+                    <button type="submit" class="primary-btn form-submit">Sign In →</button>
+
+                    <p class="form-bottom-text">
+                        Don't have an account?
+                        <a href="signup.html">Create Account</a>
+                    </p>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

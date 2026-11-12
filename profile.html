@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your Stackly Finance profile and account details.">
+    <title>My Profile | Stackly Finance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="dashboard-body">
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">S</div>
+            <p>STACKLY FINANCE</p>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="index.html" class="brand-logo sidebar-logo">
+                Stackly<span>.</span>
+            </a>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">MAIN MENU</p>
+
+                <a href="dashboard.html" class="sidebar-link"><span>◫</span> Dashboard</a>
+                <a href="#" class="sidebar-link"><span>↔</span> Transactions</a>
+                <a href="#" class="sidebar-link"><span>↗</span> Income</a>
+                <a href="#" class="sidebar-link"><span>↘</span> Expenses</a>
+                <a href="#" class="sidebar-link"><span>▤</span> Budgets</a>
+                <a href="#" class="sidebar-link"><span>▧</span> Invoices</a>
+                <a href="#" class="sidebar-link"><span>▥</span> Reports</a>
+                <a href="#" class="sidebar-link"><span>◉</span> Accounts</a>
+                <a href="#" class="sidebar-link"><span>⚙</span> Settings</a>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">PREFERENCES</p>
+
+                <a href="profile.html" class="sidebar-link active">
+                    <span>◎</span> My Profile
+                </a>
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a href="login.html" class="sidebar-link" id="logoutButton">
+                    <span>↪</span> Log Out
+                </a>
+
+                <div class="sidebar-help">
+                    <span>✦</span>
+                    <p>Make your money work smarter.</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+                    <div>
+                        <h1>My Profile</h1>
+                        <p>Manage your personal information and account preferences.</p>
+                    </div>
+                </div>
+
+                <div class="header-user">
+                    <div class="notification-icon">♧</div>
+
+                    <div class="user-avatar" id="profileHeaderAvatar">U</div>
+
+                    <div class="user-info">
+                        <strong id="profileHeaderName">User</strong>
+                        <span>Personal Account</span>
+                    </div>
+                </div>
+
+            </header>
+
+            <!-- Profile Content -->
+            <section class="profile-page-grid">
+
+                <!-- Profile Summary -->
+                <article class="dashboard-card profile-summary-card">
+
+                    <div class="profile-large-avatar" id="profileAvatar">U</div>
+
+                    <h2 id="profileDisplayName">Your Name</h2>
+                    <p id="profileDisplayEmail">your@email.com</p>
+
+                    <span class="member-badge">✦ Stackly Member</span>
+
+                    <div class="profile-summary-divider"></div>
+
+                    <div class="profile-mini-details">
+                        <div>
+                            <span>ACCOUNT TYPE</span>
+                            <strong>Personal</strong>
+                        </div>
+
+                        <div>
+                            <span>ACCOUNT STATUS</span>
+                            <strong class="status-active">● Active</strong>
+                        </div>
+
+                        <div>
+                            <span>MEMBERSHIP</span>
+                            <strong>Standard Member</strong>
+                        </div>
+                    </div>
+
+                    <div class="profile-summary-divider"></div>
+
+                    <p class="profile-summary-note">
+                        Keep your personal information up to date to enjoy a better financial management experience.
+                    </p>
+
+                </article>
+
+                <!-- Personal Information -->
+                <article class="dashboard-card profile-details-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Personal Information</h3>
+                            <p>Update your personal details below.</p>
+                        </div>
+
+                        <span class="profile-section-icon">◎</span>
+                    </div>
+
+                    <form id="profileForm" class="profile-form">
+
+                        <div class="profile-form-grid">
+
+                            <div class="form-group">
+                                <label for="profileName">Full Name</label>
+                                <input type="text" id="profileName" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileEmail">Email Address</label>
+                                <input type="email" id="profileEmail" placeholder="your@email.com" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profilePhone">Phone Number</label>
+                                <input type="tel" id="profilePhone" placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileCountry">Country</label>
+                                <input type="text" id="profileCountry" placeholder="Enter your country">
+                            </div>
+
+                        </div>
+
+                        <div class="form-message" id="profileMessage"></div>
+
+                        <button type="submit" class="primary-btn profile-save-btn">
+                            Save Changes →
+                        </button>
+
+                    </form>
+
+                </article>
+
+            </section>
+
+            <!-- Account Information -->
+            <section class="profile-extra-grid">
+
+                <article class="dashboard-card profile-info-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Account Information</h3>
+                            <p>Your Stackly account overview.</p>
+                        </div>
+                        <span class="profile-section-icon">▤</span>
+                    </div>
+
+                    <div class="profile-info-list">
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">⌑</div>
+                            <div>
+                                <span>Account ID</span>
+                                <strong>STK-2026-00124</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">▣</div>
+                            <div>
+                                <span>Account Type</span>
+                                <strong>Personal Finance</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">▦</div>
+                            <div>
+                                <span>Member Since</span>
+                                <strong>November 2026</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">✓</div>
+                            <div>
+                                <span>Verification Status</span>
+                                <strong class="status-active">Verified</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- Financial Preferences -->
+                <article class="dashboard-card profile-info-card">
+
+                    <div class="card-heading">
+                        <div>
+                            <h3>Financial Preferences</h3>
+                            <p>Your preferred financial settings.</p>
+                        </div>
+                        <span class="profile-section-icon">⚙</span>
+                    </div>
+
+                    <div class="profile-info-list">
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">₹</div>
+                            <div>
+                                <span>Default Currency</span>
+                                <strong>Indian Rupee (INR)</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">◷</div>
+                            <div>
+                                <span>Time Zone</span>
+                                <strong>India Standard Time</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">▤</div>
+                            <div>
+                                <span>Date Format</span>
+                                <strong>DD / MM / YYYY</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-icon">◉</div>
+                            <div>
+                                <span>Account Category</span>
+                                <strong>Personal</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- Security Information -->
+            <section class="dashboard-card profile-security-card">
+
+                <div class="card-heading">
+                    <div>
+                        <h3>Account Security</h3>
+                        <p>Keep your account protected.</p>
+                    </div>
+
+                    <span class="profile-section-icon">♢</span>
+                </div>
+
+                <div class="security-content">
+
+                    <div class="security-item">
+                        <div class="security-icon">✓</div>
+                        <div>
+                            <strong>Password Protection</strong>
+                            <p>Your account is protected with a password.</p>
+                        </div>
+                        <span class="security-status">Enabled</span>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">✉</div>
+                        <div>
+                            <strong>Email Verification</strong>
+                            <p>Your email verification helps secure your account.</p>
+                        </div>
+                        <span class="security-status">Verified</span>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">⌁</div>
+                        <div>
+                            <strong>Privacy & Security</strong>
+                            <p>Review your account details and keep them updated.</p>
+                        </div>
+                        <a href="#" class="security-link">Manage →</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Recent Account Activity -->
+            <section class="dashboard-card profile-activity-card">
+
+                <div class="card-heading">
+                    <div>
+                        <h3>Recent Account Activity</h3>
+                        <p>A quick overview of your recent account activity.</p>
+                    </div>
+
+                    <span class="profile-section-icon">◷</span>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-row">
+                        <div class="activity-dot"></div>
+                        <div class="activity-details">
+                            <strong>Profile information reviewed</strong>
+                            <span>Personal account information</span>
+                        </div>
+                        <span class="activity-date">Recently</span>
+                    </div>
+
+                    <div class="activity-row">
+                        <div class="activity-dot"></div>
+                        <div class="activity-details">
+                            <strong>Email verification completed</strong>
+                            <span>Account security</span>
+                        </div>
+                        <span class="activity-date">Account setup</span>
+                    </div>
+
+                    <div class="activity-row">
+                        <div class="activity-dot"></div>
+                        <div class="activity-details">
+                            <strong>Stackly account created</strong>
+                            <span>Welcome to Stackly Finance</span>
+                        </div>
+                        <span class="activity-date">November 2026</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <p>© 2026 Stackly Finance. All rights reserved.</p>
+                <p>Designed for smarter financial living.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
